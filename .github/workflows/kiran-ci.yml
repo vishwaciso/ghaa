@@ -2,6 +2,7 @@
 name: name of the workflow
 env:
   workflow_var: "workflowvalue"
+  kiran: ${{ vars.VEER_CLASS }}
   
 on:
   push:
@@ -20,3 +21,11 @@ jobs:
         run: 
           echo "veer="gitclass" >> $GITHUB_ENV" 
           echo  "this is the step level var $veer"
+
+      - name: repo level var
+        run:
+          echo "repo level vars ${{ vars.VEER_CLASS }}
+
+      - name: assiging repo level var into global level
+        run: 
+           echo "calling repo var into glboal level  $kiran" 
