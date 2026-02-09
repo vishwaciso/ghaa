@@ -9,6 +9,10 @@ on:
 jobs:
   demo-job:
     runs-on: ubuntu-latest
+    env:
+      job_var: "this is the job variable"
     steps:
       - name: this is the first step
-        run: echo "$workflow_var, is the output ,getting the output "
+        run: |
+           echo "$workflow_var, is the output ,getting the output "
+           echo "$job_var "
