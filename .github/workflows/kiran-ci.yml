@@ -1,5 +1,8 @@
 #this is the comment line
 name: name of the workflow
+env:
+  workflow_var: "workflowvalue"
+  
 on:
   push:
       branches: [ 'main' ]
@@ -8,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: this is the first step
-        run: echo "hi welcome to the class"
+        run: echo "$workflow_var, is the output ,getting the output "
