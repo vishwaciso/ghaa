@@ -16,3 +16,7 @@ jobs:
         run: |
            echo "$workflow_var, is the output ,getting the output "
            echo "$job_var "
+      - name: this the second step
+        run: 
+          echo "veer="gitclass" >> $GITHUB_ENV" 
+          echo  "this is the step level var $veer"
