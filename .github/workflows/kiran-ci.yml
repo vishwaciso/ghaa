@@ -26,6 +26,6 @@ jobs:
         run:
           echo "repo level vars ${{ vars.VEER_CLASS }}
 
-      - name: assiging repo level var into global level
-        run: 
-           echo "calling repo var into glboal level  $kiran" 
+      # - name: assiging repo level var into global level
+      #   run: 
+      #      echo "calling repo var into glboal level  $kiran" 
